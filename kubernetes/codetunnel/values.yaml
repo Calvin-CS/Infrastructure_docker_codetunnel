@@ -1,0 +1,10 @@
+image:
+  registry: calvincs.azurecr.io
+  name: codetunnel
+  tag: latest
+dns:
+  name: cs.calvin.edu
+rollingUpdate:
+  enabled: true
+  maxSurge: "100%"
+  maxUnavailable: "100%"
