@@ -31,7 +31,7 @@ spec:
         resources:
           requests:
             memory: "1Gi"
-            cpu: "500m"  # 0.5 CPU
+            cpu: "250m"  # 0.25 CPU
           limits:
             memory: "3.5Gi"
             cpu: "1750m"  # 1.75 CPU
@@ -109,5 +109,18 @@ spec:
     name: codetunnel-{{ default "staging" .Release.Namespace }}
   minReplicas: 2
   maxReplicas: 10
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 80
+  #metrics:
+  #- type: Resource
+  # resource:
+  #   name: cpu
+  #   target:
+  #     type: Utilization
+  #     averageUtilization: 70
+  #- type: Resource
+  #resource:
+  #   name: memory
+  #   target:
+  #     type: Utilization
+  #     averageUtilization: 70
 {{- end }}
