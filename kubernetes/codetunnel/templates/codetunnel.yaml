@@ -109,7 +109,7 @@ spec:
     name: codetunnel-{{ default "staging" .Release.Namespace }}
   minReplicas: 2
   maxReplicas: 10
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 90
   #metrics:
   #- type: Resource
   # resource:
