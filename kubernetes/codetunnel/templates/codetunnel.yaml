@@ -31,7 +31,7 @@ spec:
         resources:
           requests:
             memory: "1Gi"
-            cpu: "250m"  # 0.25 CPU
+            cpu: "500m"  # 0.5 CPU
           limits:
             memory: "3.5Gi"
             cpu: "1750m"  # 1.75 CPU
