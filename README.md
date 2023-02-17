@@ -18,4 +18,4 @@ NOTE: if you remove the service from kubernetes (not upgrading, removal) then yo
 - associated vNic in the Server_AKS_codetunnel vnet
 
 4. Register DNS to the pviate-endpoint
-  codetunnel.cs.calvin.edu -> 10.230.64.34
+  codetunnel.cs.calvin.edu -> 10.230.64.36
