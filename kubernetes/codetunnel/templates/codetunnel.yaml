@@ -31,10 +31,10 @@ spec:
         resources:
           requests:
             memory: "1Gi"
-            cpu: "500m"  # 0.5 CPU
+            cpu: "250m"  # 0.25 CPU
           limits:
             memory: "3.5Gi"
-            cpu: "1750m"  # 1.75 CPU
+            cpu: "1000m"  # 1 CPU
         volumeMounts:
         - mountPath: /home
           name: mount0
