@@ -2,7 +2,7 @@ FROM calvincs.azurecr.io/base-code:latest
 LABEL maintainer="Chris Wieringa <cwieri39@calvin.edu>"
 
 # Set versions and platforms
-ARG BUILDDATE=20230214-2
+ARG BUILDDATE=20230303-1
 ARG S6_OVERLAY_VERSION=3.1.3.0
 
 # Do all run commands with bash
