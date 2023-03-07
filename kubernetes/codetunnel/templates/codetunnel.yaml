@@ -6,7 +6,7 @@ metadata:
   labels:
     app: codetunnel-{{ default "staging" .Release.Namespace }}
 spec:
-  {{ if ne .Release.Namespace "production" }}replicas: 1{{- else }}replicas: 3{{- end }}
+  {{ if ne .Release.Namespace "production" }}replicas: 1{{- else }}replicas: 1{{- end }}
   selector:
     matchLabels:
       app: codetunnel-{{ default "staging" .Release.Namespace }}
@@ -33,8 +33,8 @@ spec:
             memory: "1Gi"
             cpu: "250m"  # 0.25 CPU
           limits:
-            memory: "3.5Gi"
-            cpu: "1000m"  # 1 CPU
+            memory: "6.5Gi"
+            cpu: "1500m"  # 1.5 CPU
         volumeMounts:
         - mountPath: /home
           name: mount0
