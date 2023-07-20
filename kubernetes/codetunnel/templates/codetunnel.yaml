@@ -74,8 +74,6 @@ metadata:
   annotations:
     external-dns.alpha.kubernetes.io/hostname: code-tunnel{{- if ne .Release.Namespace "production" }}-{{ default "staging" .Release.Namespace }}{{- end }}.{{ .Values.dns.name }}
     service.beta.kubernetes.io/azure-dns-label-name: calvincs-code-tunnel{{- if ne .Release.Namespace "production" }}-{{ default "staging" .Release.Namespace }}{{- end }}
-    #service.beta.kubernetes.io/azure-load-balancer-internal: "true"
-    #{{ if ne .Release.Namespace "production" }}{{- else }}service.beta.kubernetes.io/azure-pls-create: "true"{{- end }}
 spec:
   type: LoadBalancer
   ports:
