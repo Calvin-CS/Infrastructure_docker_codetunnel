@@ -52,19 +52,19 @@ spec:
       volumes:
       - name: mount0
         persistentVolumeClaim:
-          claimName: pvc-nfs-katzstunnel-home
+          claimName: pvc-nfs-katzstunnel-home-{{ default "staging" .Release.Namespace }}
       - name: mount1
         persistentVolumeClaim:
-          claimName: pvc-nfs-katzstunnel-rprojects
+          claimName: pvc-nfs-katzstunnel-rprojects-{{ default "staging" .Release.Namespace }}
       - name: mount2
         persistentVolumeClaim:
-          claimName: pvc-nfs-r-int-r
+          claimName: pvc-nfs-r-int-r-{{ default "staging" .Release.Namespace }}
       - name: mount3
         persistentVolumeClaim:
-          claimName: pvc-nfs-r-int-python
+          claimName: pvc-nfs-r-int-python-{{ default "staging" .Release.Namespace }}
       - name: mount4
         persistentVolumeClaim:
-          claimName: pvc-nfs-r-int-anaconda
+          claimName: pvc-nfs-r-int-anaconda-{{ default "staging" .Release.Namespace }}
 ---
 apiVersion: v1
 kind: Service
