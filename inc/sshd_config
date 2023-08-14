@@ -105,8 +105,8 @@ AcceptEnv LC_IDENTIFICATION LC_ALL
 #AllowTcpForwarding yes
 AllowTcpForwarding no
 #GatewayPorts no
-#X11Forwarding no
-X11Forwarding yes
+X11Forwarding no
+#X11Forwarding yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 X11UseLocalhost yes
@@ -130,7 +130,7 @@ UseDNS no
 #MaxSessions 10
 
 #PermitTunnel no
-PermitTunnel no
+PermitTunnel yes
 #ChrootDirectory /chroot/student
 #AllowAgentForwarding yes
 AllowAgentForwarding yes
